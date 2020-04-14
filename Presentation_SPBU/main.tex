@@ -1,0 +1,161 @@
+\documentclass[aspectratio=1610]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{verbatim}% type in mode
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage[
+backend=biber,
+style=numeric,
+citestyle=numeric
+]{biblatex}
+\usepackage{csquotes}
+\addbibresource{bibfile.bib}
+
+\graphicspath{{figures/}}%Figure Path
+\setbeamertemplate{caption}[numbered] % achieve numbering of figures 
+\setbeamertemplate{bibliography item}{\insertbiblabel} % achieve numbering bibliography
+
+% \newcommand{\ipt}[1]{\input{source/#1}}
+% \def\A{\mathrm{A}}
+%%%Optimize picture layout
+\newlength\imagewidth
+\setlength\imagewidth{0.45\columnwidth}
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+% \usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+% \usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+% \usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+% \usecolortheme{beaver}
+% \usecolortheme{beetle}
+%\usecolortheme{crane}
+% \usecolortheme{dolphin}
+% \usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+% \usecolortheme{orchid}
+\usecolortheme{rose}
+% \usecolortheme{seagull}
+%\usecolortheme{seahorse}
+% \usecolortheme{whale}
+% \usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+
+\title{\LaTeX\ Beamer Template}
+%%% For multi Author
+% \author[Zhao Chi, Ivan]
+% {Zhao Chi\inst{1}\and Ivan \inst{2}}
+%%% For single Author
+\author{Zhao Chi}
+
+\date[2020]
+{Prepare for Game Theory Presentation, April 2020}
+%%% For multi institute
+% \institute{
+%     \inst{1}
+%     Faculty of Applied Mathematics \\
+%     and Control Processes
+%     \and
+%     \inst{2}
+%     Faculty of Applied Mathematics \\
+%     and Control Processes
+% }
+%%% For Single institute
+\institute[St.Petersburg State University]{
+    St.Petersburg State University \\ Faculty of Applied Mathematics and Control Processes\\
+    \textit{dandanv5@hotmail.com}
+}
+
+% \logo{\includegraphics[height=1.5cm]{CoA_Medium_color.png}\quad \includegraphics[height=1.5cm]{PMPU.jpg}}
+\logo{\includegraphics[height=1.5cm]{PMPU.jpg}}
+
+% \AtBeginSection[]
+% {
+%   \begin{frame}
+%     \frametitle{Table of Contents}
+%     \tableofcontents[currentsection]
+%   \end{frame}
+% }
+
+\begin{document}
+\begin{frame}
+    \titlepage % Print the title page as the first slide
+\end{frame}
+    
+\begin{frame}
+  \frametitle{Table of contents slide} % Table of contents slide, comment this block out to remove it
+  \tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+% \section{How to use this template?}
+% \begin{frame}
+%   \frametitle{How to use this template?}
+% \end{frame}
+
+\input{source/chapter1.tex}
+\input{source/chapter2.tex}
+\input{source/chapter3.tex}
+\input{source/bib.tex}
+% \ipt{chapter1.tex}
+
+% \begin{frame}
+%   \cite{oetiker1995not}
+% \end{frame}
+
+\begin{frame}
+    \frametitle{Thanks for your attention}
+    \medskip
+    \centering
+    {\LARGE{\inserttitle}}\\
+    \bigskip
+    {\LARGE{\insertauthor}}\\
+    \bigskip
+    % \insertinstitute\\
+    \bigskip
+    \insertdate
+    % {\LARGE{\centerline{Correct me if I'm wrong!}}}
+    % {\centerline{Author: Zhao Chi}}
+    \end{frame}
+\end{document}

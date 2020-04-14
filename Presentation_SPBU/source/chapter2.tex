@@ -1,0 +1,54 @@
+\section{Section2}
+\subsection{Figure}
+\begin{frame}
+    \frametitle{Figure}
+    \begin{columns}
+        \column{0.5\textwidth}
+        Single figure.
+        \begin{figure}[ht]
+            \centering
+              \includegraphics[height=1.5cm]{SPBU.png}
+              \caption{SPBU}
+              \label{fig:SPBU}
+        \end{figure}
+        \column{0.5\textwidth}
+        Multi Figure.
+        \begin{figure}[ht]
+            \centering
+            \begin{minipage}[t]{0.48\linewidth}
+            \centering
+            \includegraphics[height=1.5cm]{SPBU}\\
+            a)
+            \end{minipage} \hfill
+            \begin{minipage}[t]{0.48\linewidth}
+            \centering
+            \includegraphics[height=1.5cm]{PMPU}\\
+            b)
+            \end{minipage}
+            \caption{a) image ``SPBU''; b) ``PMPU''.}
+            \label{fig:APairPlaintext}
+        \end{figure}
+    \end{columns}
+\end{frame}
+\subsection{Table}
+\begin{frame}
+\frametitle{How to use Table}
+    This frame is used to show how to use Table.
+    \begin{table}[ht]
+        \centering
+        \caption{Sample of student weight}
+        \label{tab:1}
+            \begin{tabular}{ccccc}
+            \toprule
+            Num&Gender&Age&Height/cm&Weight/kg\\
+            \midrule
+            1&F&14&156&42\\
+            2&F&16&158&45\\
+            3&M&14&162&48\\
+            4&M&15&163&50\\
+            \cmidrule{3-5} %添加2-4列的中线
+            Average& &15&159.75&46.25\\
+            \bottomrule
+            \end{tabular}
+        \end{table}
+\end{frame}

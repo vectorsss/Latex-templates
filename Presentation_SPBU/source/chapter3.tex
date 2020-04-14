@@ -1,0 +1,70 @@
+\section{Sectoin 3}
+\subsection{Multiline Equation}
+\begin{frame}
+    \frametitle{Multiline Equation}
+    Aligning several equations with no numbers  \cite{oetiker1995not}
+    .
+    \begin{align*}
+        x&=y           &  w &=z              &  a&=b+c\\
+        2x&=-y         &  3w&=\frac{1}{2}z   &  a&=b\\
+        -4 + 5x&=2+y   &  w+2&=-1+w          &  ab&=cb
+    \end{align*}
+    Other way.
+    \begin{equation}
+    \begin{aligned}
+        x&=y           &  w &=z              &  a&=b+c\\
+        2x&=-y         &  3w&=\frac{1}{2}z   &  a&=b\\
+        -4 + 5x&=2+y   &  w+2&=-1+w          &  ab&=cb
+    \end{aligned}
+\end{equation}
+\end{frame}
+\begin{frame}
+    \frametitle{Multiline Equation}
+    \begin{multline}
+        a + b + c + d + e + f+ g + h + i \\
+        = j + k + l + m + n\\
+        = o + p + q + r + s\\
+        = t + u + v + x + z
+    \end{multline}
+    \begin{align}
+        a + b + c + d + e + f+ g + h + i \\
+        = j + k + l + m + n \notag\\
+        = o + p + q + r + s \tag{dumb}\\
+        = t + u + v + x + z
+    \end{align}
+\end{frame}
+
+\subsection{Array and matrix}
+\begin{frame}
+
+Matrix
+\begin{equation*}
+    \mathbb{P}= 
+    \begin{bmatrix}
+    p_{11} & p_{12} & \ldots& p_{1n} \\
+    p_{21} & p_{22} & \ldots& p_{2n} \\
+    \vdots & \vdots & \ddots& \vdots \\
+    p_{m1} & p_{m2} & \ldots& p_{mn}
+    \end{bmatrix}
+\end{equation*}
+
+Array
+
+\begin{equation*}
+|x| =
+    \begin{cases}
+    -x & \text{if } x < 0,\\
+    0 & \text{if } x = 0,\\
+    x & \text{if } x > 0.
+    \end{cases}
+\end{equation*}
+
+\begin{equation*}
+    |x| =\left\{
+        \begin{array}{lr}
+            -x & \text{if } x < 0,\\
+            0 & \text{if } x = 0,\\
+            x & \text{if } x > 0.
+            \end{array}\right.
+    \end{equation*}
+\end{frame}
