@@ -1,1 +1,18 @@
 .DS_Store
+
+# Tex redundant files
+
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*blx.bib
