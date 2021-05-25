@@ -1,9 +1,23 @@
 \documentclass[aspectratio=1610]{beamer}
+% \usepackage[cp1251]{inputenc} % add by Zhao Chi
 \usepackage[utf8]{inputenc}
+%% the following two lines is for anyfontsize support add by Zhao Chi
+\usepackage{anyfontsize}
+\usepackage[T1]{fontenc}
+\usepackage{caption} % add by Zhao Chi, used for adjust caption
+\DeclareUnicodeCharacter{0301}{\'{e}} % add by Zhao Chi
 \usepackage[english]{babel}
 \usepackage{amsmath}
 \usepackage{enumerate}
+\usepackage{listings} % 代码块
+\lstset{
+    basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+    numbers=left,
+    frameshape={RYRYNYYYY}{yny}{yny}{RYRYNYYYY}
+}
+\usepackage{url}
 \usepackage{graphicx}
+\usepackage{csquotes}
 \usepackage{verbatim}% type in mode
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage[
@@ -11,25 +25,24 @@ backend=biber,
 style=numeric,
 citestyle=numeric
 ]{biblatex}
-\usepackage{csquotes}
 \addbibresource{bibfile.bib}
 
 \graphicspath{{figures/}}%Figure Path
-\setbeamertemplate{caption}[numbered] % achieve numbering of figures 
-\setbeamertemplate{bibliography item}{\insertbiblabel} % achieve numbering bibliography
 
 % \newcommand{\ipt}[1]{\input{source/#1}}
 % \def\A{\mathrm{A}}
 %%%Optimize picture layout
 \newlength\imagewidth
 \setlength\imagewidth{0.45\columnwidth}
+% \usepackage{beamerthemesplit}
+\usepackage{multirow} % add by Zhao Chi
 \mode<presentation> {
 
 % The Beamer class comes with a number of default slide themes
 % which change the colors and layouts of slides. Below this is a list
 % of all the themes, uncomment each in turn to see what they look like.
 
-\usetheme{default}
+% \usetheme{default}
 %\usetheme{AnnArbor}
 %\usetheme{Antibes}
 %\usetheme{Bergen}
@@ -80,7 +93,31 @@ citestyle=numeric
 %\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
 
 %\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+
 }
+
+
+\makeatletter
+\setbeamertemplate{caption}[numbered] % achieve numbering of figures 
+\setbeamertemplate{bibliography item}{\insertbiblabel} % achieve numbering bibliography
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.31324\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor\expandafter\beamer@ifempty\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.50676\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.18\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
 
 
 \title{\LaTeX\ Beamer Template}
