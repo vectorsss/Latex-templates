@@ -1,0 +1,53 @@
+%!TEX option = --shell-escape
+\documentclass[english, 12pt]{article}
+\usepackage{babel}
+\usepackage{epsfig}
+\usepackage{diagbox}
+\usepackage[cp1251]{inputenc}
+%\usepackage[14pt]{extsizes}
+\usepackage{amsmath}
+\usepackage{graphicx}
+% \usepackage{showframe}          % http://www.ctan.org/pkg/showframe
+\graphicspath{{figures/}}
+\usepackage{setspace}
+\renewcommand{\baselinestretch}{1.5}
+\setlength{\parindent}{1.25cm}
+% \usepackage[a4paper]{geometry}
+% \geometry{verbose,tmargin=2cm,bmargin=2.5cm,lmargin=3.5cm,rmargin=1.5cm}
+\usepackage[left=30mm, top=20mm, right=15mm, bottom=20mm,nohead, includefoot,footskip=35pt]{geometry}
+\usepackage{url} %url add by Zhao Chi
+\usepackage[breaklinks,colorlinks,linkcolor=black,citecolor=black,urlcolor=black]{hyperref} % bookmark add by Zhao Chi
+\usepackage{multirow} % multirow add by Zhao Chi
+\usepackage{tabularx} % long sentence auto wrap up add by Zhao Chi
+\usepackage{amsfonts} % math fonts
+\usepackage{caption} % add by Zhao Chi use to remove number of figure
+
+\newlength\imagewidth
+\setlength\imagewidth{0.45\columnwidth}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{property}{Property}
+%\newtheorem{proof}{Proof}
+
+\usepackage{listings} % 代码块
+\lstset{
+    basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+    numbers=left,
+    frameshape={RYRYNYYYY}{yny}{yny}{RYRYNYYYY}
+}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e} % 伪代码排版
+\lstset{framexleftmargin=-5mm, framexrightmargin=-5mm,numbers=none, frameshape={RYRYNYYYY}{yny}{yny}{RYRYNYYYY}} % 代码块风格
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables add by Zhao Chi
+\usepackage{biblatex} % add by Zhao Chi
+\usepackage{csquotes} % add by Zhao Chi
+\usepackage{chngcntr} % add by Zhao Chi, counter within section
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\addbibresource{bibfile.bib}
+
+
+\makeatletter
+\renewcommand{\@biblabel}[1]{#1.}
+\makeatother

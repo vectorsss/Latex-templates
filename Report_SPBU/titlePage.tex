@@ -1,0 +1,51 @@
+\newtoks\Specialization %   specialization
+\newtoks\SpecializationName % specialization name
+\newtoks\Name % your name
+\newtoks\Supervisor % scientific supervisor
+\newtoks\Faculty % Faculty
+\newtoks\Title % title 
+\newtoks\Program % program
+\newtoks\ReportName % class name
+
+
+\Specialization{01.06.01}
+\SpecializationName{Mathematics and Mechanics}
+\Faculty{Applied Mathematics and Control Process}
+\ReportName{History and Philosophy of Science}
+\Title{Here is title}
+\Supervisor{Prof. Elena Parilina}
+\Name{Zhao Chi}
+\Program{Applied Mathematics and Control Process}
+
+
+\large
+\begin{titlepage}
+\begin{center}
+\textbf{Saint Petersburg State University}\\
+\textbf{Faculty of \the\Faculty}\\
+\vskip 45pt
+{\Large \the\Name}
+\vskip 20pt
+{\Large \the\ReportName}
+\vskip 50pt
+{\LARGE \textbf{\the\Title}}\\
+\vskip 25pt
+Specialization \the\Specialization\\
+\the\SpecializationName\\
+Aspirantura's Program \the\Program 
+
+\vskip 50pt
+\begin{singlespacing}
+\begin{flushleft}
+\hskip 280pt Science Supervisor
+\end{flushleft}
+\begin{flushleft}
+\hskip 280pt \the\Supervisor
+\end{flushleft}
+\end{singlespacing}
+\vfill
+Saint Petersburg\\
+2021
+\end{center}
+\end{titlepage}
+\clearpage

@@ -1,0 +1,67 @@
+\input{packages.tex}
+\begin{document}
+\input{titlePage.tex}
+\tableofcontents
+\setcounter{page}{2}
+\clearpage
+
+\section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
+
+Abstract
+
+\section{Some examples}
+
+This sentence just show how to cite\cite{oetiker1995not}.
+
+Table example.
+\begin{table}[ht]
+    \centering
+    \caption{Sample of student weight}
+    \label{tab:1}
+        \begin{tabular}{ccccc}
+        \toprule
+        Num&Gender&Age&Height/cm&Weight/kg\\
+        \midrule
+        1&F&14&156&42\\
+        2&F&16&158&45\\
+        3&M&14&162&48\\
+        4&M&15&163&50\\
+        \cmidrule{3-5} %add the middle line between 3-5 columns
+        Average& &15&159.75&46.25\\
+        \bottomrule
+        \end{tabular}
+\end{table}
+
+Single figure.
+\begin{figure}[ht]
+    \centering
+      \includegraphics[width=\imagewidth]{SPBU.png}
+      \caption{SPBU}
+      \label{fig:SPBU}
+\end{figure}
+
+\clearpage
+
+Multi-figure example.
+\begin{figure}[ht]
+    \centering
+    \begin{minipage}[t]{\imagewidth}
+    \centering
+    \includegraphics[width=\imagewidth]{SPBU.png}
+    a)
+    \end{minipage} \hspace{4pt}
+    \begin{minipage}[t]{\imagewidth}
+    \centering
+    \includegraphics[width=\imagewidth]{PMPU.jpg}
+    b)
+    \end{minipage}
+    \caption{SPBU \& PMPU a) SPBU; b) PMPU}
+\end{figure}
+
+%%% Do not change the following code
+\section*{References}
+\addcontentsline{toc}{section}{References}
+\printbibliography[heading=none]
+%%%
+\end{document} 
